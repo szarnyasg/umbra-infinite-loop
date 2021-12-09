@@ -16,7 +16,7 @@ create table knows (
    k_creationdate timestamp with time zone not null
 );
 
-COPY person FROM 'PATHVAR/person_0_0.csv' WITH DELIMITER '|' CSV HEADER;
+COPY person FROM '/home/szarnyasg/git/umbra-infinite-loop/data/person_0_0.csv' WITH DELIMITER '|' CSV HEADER;
 
-COPY knows (k_person1id, k_person2id, k_creationdate) FROM 'PATHVAR/person_knows_person_0_0.csv' WITH DELIMITER '|' CSV HEADER;
-COPY knows (k_person2id, k_person1id, k_creationdate) FROM 'PATHVAR/person_knows_person_0_0.csv' WITH DELIMITER '|' CSV HEADER;
+COPY knows (k_person1id, k_person2id, k_creationdate) FROM '/home/szarnyasg/git/umbra-infinite-loop/data/person_knows_person_0_0.csv' WITH DELIMITER '|' CSV HEADER;
+COPY knows (k_person2id, k_person1id, k_creationdate) FROM '/home/szarnyasg/git/umbra-infinite-loop/data/person_knows_person_0_0.csv' WITH DELIMITER '|' CSV HEADER;

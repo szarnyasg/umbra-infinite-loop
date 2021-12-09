@@ -12,10 +12,7 @@ WITH RECURSIVE
             and not exists(select * from sg y where y.sg_link = k_person2id)
           )
 )
-select max(depth) AS shortestPathLength from (
-    select level as depth
-    from search_graph
-    where link = 8796093022390
-    union all
-    select -1
-) tmp;
+select level as depth
+from search_graph
+where link = 8796093022390
+;
