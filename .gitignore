@@ -1,1 +1,2 @@
 *.lock
+postgres_data/
