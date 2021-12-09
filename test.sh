@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -eu
+
 sed "s|PATHVAR|`pwd`/data|g" sql/load.sql > sql/load-pwd.sql
 
 rm -rf /tmp/umbra-scratch/

@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -eu
+
 sed "s|PATHVAR|/data|g" sql/load.sql > sql/load-container.sql
 
 rm -rf /tmp/umbra-scratch/
